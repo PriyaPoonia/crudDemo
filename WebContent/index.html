@@ -8,58 +8,16 @@
 
 	//creating student object                     & creating collection with[]
 	
-	var students = [
-
-	{ //local variable (calling must be done in the function itself)
-		name : 'Pavan Poojari',
-		id : 's170010300096',
-		course : ' Digital transformation',
-		attendLecture : function() {
-			console.log('giving exam');
-		},
-		address : {
-			lineOne : 'thane',
-			lineTwo : 'mumbai'
-		}
-
-	},
-
-	{
-		name : 'praveen',
-		id : 's170010300093',
-		course : ' Digital transformation',
-		attendLecture : function() {
-			console.log('giving exam');
-		},
-		address : {
-			lineOne : 'borvali',
-			lineTwo : 'dombivalli'
-		}
+function validate() {
+		var username= document.registration.username.value;
+		var regusername = /^[A-Z]{1}[a-z]{1,}$/ ;                 // shortcut of regular expression
+		//var regusername = new RegExp(^[A-Z]{1}[a-z]{1,}$) ;
+		console.log(regusername.test(username))
+		return true;
+		
 	}
 
-	];
- 
-	window.onloadv= welcome;
-	function welcome()
-	{
-		var div = document.getElementById('show');
-		
-		var str = ' ';
-		
-		for(var i=0; i < students.length ;i++ )
-			{
-			str += 'student name : ' + students[i].name +'<br/>';
-			}
-
-		div.innerHTML = str;
-	}
-	
-	
-	console.log(student.name); 					//confirm('the value is correct');
-	student.attendLecture(); 
-	
-	
-}											//prompt('enter your name here:');
+	//prompt('enter your name here:');
 													//alert('hey');
 													//alert(window['a']);                  //alert(a), alert(window.a) other methods for accessing global variable: return the type of data
 													// console.log(typeof a)
